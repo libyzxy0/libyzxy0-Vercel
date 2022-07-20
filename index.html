@@ -1,3 +1,98 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport"content="width=device-width, initial-scale=1.0">
-<title>Jan Liby Dela Costa</title><meta name="description" content="No content website"></head>
-<body><center><p>Sorry this page is no content visit our website <a href="https://libyzxy0.github.io">Here!</a>.</p></center></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="This website is no content">
+    <title>Jan Liby Dela Costa</title>
+</head>
+
+<body>
+
+    <div class="box">
+        <p class="title">Notice : </p>
+        <p class="desc">This website is no content, Click the button below to view my website.</p>
+        <button onclick="window.location.href='https://libyzxy0.github.io/'" class="view">View my Website</button>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #111111;
+    text-align: center;
+    border-radius: 10px;
+}
+.title {
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 28px;
+}
+.desc {
+    color: #76ecb3;
+    margin: 10px 16px;
+}
+.view {
+    border: 0;
+    background: #1C1C1C;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #76ecb3;
+    margin-top: 30px;
+    transition: 0.2s;
+}
+.view:hover, view:focus {
+    background: #76ecb3;
+    color: #ffffff;
+}
+.box::before,
+.box::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    top: -3px;
+    left: -3px;
+    background: linear-gradient(45deg,
+    #fc0090, #0000ff, #00ff00, #ff0000, #ffff00,
+    #fc0090, #0000ff, #00ff00, #ff0000, #ffff00
+    );
+    background-size: 300%;
+    animation: border 20s linear infinite;
+    border-radius: 12px;
+}
+
+.box::after {
+    filter: blur(30px);
+}
+
+@keyframes border {
+
+    0%, 100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300%;
+    }
+    
+}
+
+    </style>
+</body>
+</html>
